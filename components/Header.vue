@@ -41,13 +41,13 @@ export default {
     },
     mounted(){
         if(process.client) {
-
             const headerAct = () => {
                 if(this.$route.fullPath == '/') {
                     let currentScrollPos;
                     this.header = '';
-                    window.onscroll = () => {
+                    document.addEventListener('scroll', () => {
                         if(this.$route.fullPath == '/') {
+
                             currentScrollPos = window.pageYOffset;
                             if(currentScrollPos >= 100) {
                                 this.header = 'top';
@@ -55,7 +55,7 @@ export default {
                                 this.header = '';
                             }
                         }
-                    }
+                    });
                 } else {
                     this.header = 'top';
                     return false;

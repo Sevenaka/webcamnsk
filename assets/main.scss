@@ -7,6 +7,9 @@ body{
     color: #000000;
     &.open{
         overflow: hidden;
+        .profile_btn{
+            display: none;
+        }
     }
 }
 a{
@@ -91,4 +94,35 @@ button{
 .btn-primary{
     background-color: var(--main);
     border-color: var(--main);
+}
+.profile_btn{
+    position: fixed;
+    --safe-area-inset-bottom: env(safe-area-inset-bottom);
+    padding-bottom: calc(0px + var(--safe-area-inset-bottom));
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    will-change: transform;
+    text-align: center;
+    z-index: 100;
+    button{
+        background: var(--main2);
+        color: #ffffff;
+        border: 0px;
+        border-radius: 30px;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        padding: 6px 18px;
+        transition: transform .2s linear,height .12s;
+        -webkit-transition: transform .2s linear,height .12s;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 14px;
+        &.pinned{
+            -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+        }
+    }
 }
