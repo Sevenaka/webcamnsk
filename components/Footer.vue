@@ -98,6 +98,7 @@ export default {
                         cursor: pointer;
                         background: transparent;
                         -webkit-appearance: initial;
+                        padding: 0px;
                     }
                     button,
                     a{

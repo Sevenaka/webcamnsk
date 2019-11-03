@@ -15,7 +15,7 @@
                         <input v-model="chc" value="Веб-моделью" type="radio" id="selectType" name="customRadio" class="custom-control-input">
                         <label class="custom-control-label" for="selectType">
                             <i class="ico ico_pattern ico_web_model"></i>
-                            <div class="name">Веб-моделью</div>
+                            <div class="name">Веб <br/>моделью</div>
                         </label>
                     </div>
                     <div class="custom-control custom-radio">
@@ -67,9 +67,10 @@ export default {
     input[type=tel],
     input[type=text]{
         background: rgba(255, 255, 255, 0.05);
+        background-color: rgba(255, 255, 255, 0.05);
         border-radius: 3px;
         padding: 5px 10px;
-        height: 52px;
+        height: 52px!important;
         border: 2px solid white;
         color: #ffffff;
     }
@@ -104,6 +105,11 @@ export default {
                 }
                 .name{
                     font-size: 14px;
+                    line-height: 14px;
+                    height: 28px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
             }
             .custom-control-input:checked~.custom-control-label{
