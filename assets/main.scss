@@ -1,0 +1,94 @@
+:root{
+    --main: #7A4896;
+    --main2: #4a2558;
+}
+body{
+    min-height: 3000px;
+    color: #000000;
+    &.open{
+        overflow: hidden;
+    }
+}
+a{
+    text-decoration: none!important;
+}
+a,
+button{
+    outline: none!important;
+}
+.ico{
+    &.ico_pattern{
+        background-position: center!important;
+        background-size: contain!important;
+        background-repeat: no-repeat!important;
+    }
+    &.ico_phone{
+        background: url('~static/ico/call-answer.svg');
+    }
+    &.ico_vk{
+        background: url('~static/ico/vk-social-network-logo.svg');
+    }
+    &.ico_inst{
+        background: url('~static/ico/instagram-logo.svg');
+    }
+    &.ico_whts{
+        background: url('~static/ico/whatsapp.svg');
+    }
+    &.ico_arr_down{
+        background: url('~static/ico/download-arrow.svg');
+    }
+    &.ico_time{
+        background: url('~static/ico/clock.svg');
+    }
+    &.ico_money{
+        background: url('~static/ico/funds.svg');
+    }
+    &.ico_education{
+        background: url('~static/ico/cap.svg');
+    }
+    &.ico_design_main{
+        background: url('~static/ico/armchair_color.svg');
+    }
+    &.ico_food{
+        background: url('~static/ico/salad.svg');
+    }
+    &.ico_room{
+        background: url('~static/ico/makeup.svg');
+    }
+    &.ico_fav{
+        background: url('~static/ico/award.svg');
+    }
+    &.ico_web_model{
+        background: url('~static/ico/model.svg');
+    }
+    &.ico_operator{
+        background: url('~static/ico/support.svg');
+    }
+    &.ico_agent{
+        background: url('~static/ico/customer-service-agent.svg');
+    }
+    &.ico_location{
+        background: url('~static/ico/maps-and-flags.svg');
+    }
+    &.ico_call_phone{
+        background: url('~static/ico/call-answer_color.svg');
+    }
+    &.ico_email{
+        background: url('~static/ico/black-back-closed-envelope-shape.svg');
+    }
+}
+.h2{
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+.main_color{
+    color: var(--main);
+}
+.footer_clearfix{
+    --safe-area-inset-bottom: env(safe-area-inset-bottom);
+    padding-bottom: calc(54px + var(--safe-area-inset-bottom));
+}
+.btn-primary{
+    background-color: var(--main);
+    border-color: var(--main);
+}

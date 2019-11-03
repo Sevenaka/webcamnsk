@@ -1,0 +1,37 @@
+{
+  "name": "wmodel",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "Sevenaka",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/component-cache": "^1.1.5",
+    "@nuxtjs/google-analytics": "^2.2.1",
+    "@nuxtjs/pwa": "^3.0.0-beta.19",
+    "@nuxtjs/yandex-metrika": "^1.0.3",
+    "bootstrap-vue": "^2.0.4",
+    "nuxt": "^2.0.0",
+    "vue-awesome-swiper": "^3.1.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "coffee-loader": "^0.9.0",
+    "coffeescript": "^2.4.1",
+    "eslint": "^4.19.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "^4.13.0",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^8.0.0"
+  }
+}
