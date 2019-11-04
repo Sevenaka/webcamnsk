@@ -35,6 +35,7 @@ export default {
     SideMenu
   },
   mounted() {
+    /*
     if (process.client) {
       let prevScrollpos = window.pageYOffset,
           scrollMonitor = window.innerHeight / 2,
@@ -49,20 +50,53 @@ export default {
         prevScrollpos = currentScrollPos;
       }
 
-      let options = {
+      if(calBlock) {
+        let options = {
           rootMargin: '10px',
           threshold: 0.01
-      };
+        };
 
-      let observer = new IntersectionObserver((entry, observer) => {
-          if (entry[0].intersectionRatio > 0) {
-            this.noVisCal = false;
-          } else {
-            this.noVisCal = true;
+        let observer = new IntersectionObserver((entry, observer) => {
+            if (entry[0].intersectionRatio > 0) {
+              this.noVisCal = false;
+            } else {
+              this.noVisCal = true;
+            }
+        }, options);
+        observer.observe(calBlock);
+      }
+
+      $nuxt.$on('routeChanged', (to, from) => {
+        let prevScrollpos = window.pageYOffset,
+          scrollMonitor = window.innerHeight / 2,
+          calBlock = document.querySelector('.call_block');
+
+          window.onscroll = () => {
+            let currentScrollPos = window.pageYOffset;
+            if(currentScrollPos >= scrollMonitor && this.noVisCal) {
+                if (prevScrollpos > currentScrollPos) this.sticky = 'unpinned'
+                else this.sticky = 'pinned'
+            } else this.sticky = 'unpinned'
+            prevScrollpos = currentScrollPos;
           }
-      }, options);
-      observer.observe(calBlock);
-    }
+
+          if(calBlock) {
+            let options = {
+              rootMargin: '10px',
+              threshold: 0.01
+            };
+
+            let observer = new IntersectionObserver((entry, observer) => {
+                if (entry[0].intersectionRatio > 0) {
+                  this.noVisCal = false;
+                } else {
+                  this.noVisCal = true;
+                }
+            }, options);
+            observer.observe(calBlock);
+          }
+      })
+    }*/
   }
 }
 </script>

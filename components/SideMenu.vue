@@ -6,9 +6,8 @@
                     <div class="menu_block side_block">
                         <nav>
                             <ul>
-                                <li><nuxt-link to="/asd">О студии</nuxt-link></li>
-                                <li><nuxt-link to="/asd">Работа моделью</nuxt-link></li>
-                                <li><nuxt-link to="/asd">Контакты</nuxt-link></li>
+                                <li><nuxt-link to="/o-studii">О студии</nuxt-link></li>
+                                <li><nuxt-link to="/kontakty">Контакты</nuxt-link></li>
                             </ul>
                         </nav>
                     </div>

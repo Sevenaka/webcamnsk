@@ -3,7 +3,6 @@
     --main2: #4a2558;
 }
 body{
-    min-height: 3000px;
     color: #000000;
     &.open{
         overflow: hidden;
@@ -83,9 +82,7 @@ button{
 .h2{
     font-size: 28px;
     margin-bottom: 30px;
-}
-.main_color{
-    color: var(--main);
+    text-align: center;
 }
 .footer_clearfix{
     --safe-area-inset-bottom: env(safe-area-inset-bottom);
@@ -125,4 +122,17 @@ button{
             transform: translateY(-60px);
         }
     }
+}
+.oth_page{
+    padding-top: 70px;
+}
+.page_title{
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.clear_cl{
+    height: 40px;
+}
+a{
+    color: var(--main);
 }

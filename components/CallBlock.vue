@@ -34,7 +34,7 @@
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-primary btn-lg">Отправить</button>
+            <button type="button" class="btn btn-primary btn-lg center_btn">Отправить</button>
         </form>
     </div>
 </template>
@@ -60,6 +60,10 @@ export default {
     background-size: cover !important;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: multiply;
+    .center_btn{
+        margin: 0px auto;
+        display: block;
+    }
     h4{
         margin-bottom: 30px;
         font-size: 24px;

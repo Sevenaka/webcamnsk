@@ -55,7 +55,18 @@ export default {
         });
       }
     }
-  }
+  },
+  head() {
+      return {
+        title: 'WModels - Интернет студия',
+        meta: [
+          { hid: 'description', name: 'description', content: 'Студия Wmodels (Новосибирск) работает в сфере развлекательных услуг уже 10 лет, а это значит, что мы гарантируем вам стабильные выплаты уже ПОСЛЕ ПЕРВОГО дня работы. Мы предоставляем доступ к лучшим зарубежным сайтам и отвечаем за вашу анонимность.' },
+          { hid: 'og:title', property: 'og:title', content: 'WModels - Интернет студия' },
+          { hid: 'og:description', property: 'og:description', content: 'Студия Wmodels (Новосибирск) работает в сфере развлекательных услуг уже 10 лет, а это значит, что мы гарантируем вам стабильные выплаты уже ПОСЛЕ ПЕРВОГО дня работы. Мы предоставляем доступ к лучшим зарубежным сайтам и отвечаем за вашу анонимность.' },
+          { hid: 'name', itemprop: 'name', content: 'WModels - Интернет студия' },
+        ]
+      }
+    }
 }
 </script>
 
@@ -79,9 +90,9 @@ export default {
     right: 0;
     bottom: 0;
     z-index: 5;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
   }
-  background: url('~static/asdsadqwe-min2.jpg');
+  background: url('~static/mainbg2.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -103,7 +114,7 @@ export default {
     flex-wrap: wrap;
     align-content: center;
     h1{
-      font-size: 34px;
+      font-size: 28px;
       text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.3);
     }
     .arr_block{
