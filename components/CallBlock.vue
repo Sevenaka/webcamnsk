@@ -1,12 +1,15 @@
 <template>
     <div class="call_block">
         <h4>Всего два клика и с тобой свяжется наш администратор</h4>
-        <form>
-            <div class="form-group">
-                <input type="text" class="form-control" id="formName" placeholder="Ваше имя *">
+        <form @submit.prevent="formSubmit">
+            <div v-if="error" class="alert alert-danger" role="alert">
+                Заполните все поля
             </div>
             <div class="form-group">
-                <input type="tel" class="form-control" id="formName" placeholder="Ваш телефон *">
+                <input type="text" class="form-control" v-model="name" id="formName" placeholder="Ваше имя *">
+            </div>
+            <div class="form-group">
+                <input type="tel" class="form-control" v-model="phone" id="formName" placeholder="Ваш телефон *">
             </div>
             <div class="form-group">
                 <label class="chc_label">Кем Вы хотите работать в сфере вебкам? *</label>
@@ -34,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-primary btn-lg center_btn">Отправить</button>
+            <button type="submit" class="btn btn-primary btn-lg center_btn">Отправить</button>
         </form>
     </div>
 </template>
@@ -43,7 +46,29 @@
 export default {
     data() {
         return {
-            chc: 'Веб-моделью'
+            chc: 'Веб-моделью',
+            name: '',
+            phone: '',
+            error: false
+        }
+    },
+    methods: {
+        formSubmit(){
+            if(this.name && this.phone) {
+                this.error = false;
+                this.formRequest();
+            } else {
+                this.error = true;
+            }
+        },
+        async formRequest(){
+            let data = {
+                name: this.name,
+                phone: this.phone,
+                type: this.chc
+            }
+            const response = await this.$axios.$post('api/', data);
+            console.log(response);
         }
     }
 }

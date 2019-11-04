@@ -20,6 +20,27 @@ module.exports = {
     {src: "@/assets/bootstrap.min.css"},
     {src: "@/assets/main.scss", lang: 'scss'}
   ],
+  modules: [
+    '@nuxtjs/axios',
+    ['@nuxtjs/component-cache', { maxAge: 1000 * 60 * 60 }],
+    [
+      "nuxt-compress",
+      {
+        gzip: {
+          cache: true
+        },
+        brotli: {
+          threshold: 10240
+        }
+      }
+    ]
+  ],
+  axios: {
+    baseURL: 'https://webcamnsk.com/',
+    credentials: true,
+    debug: false
+    //https: true
+  },
   loading: { color: '#3B8070' },
   /*
   ** Build configuration

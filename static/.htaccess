@@ -1,0 +1,47 @@
+<FilesMatch "\.(js|css|jpg|gif|png|pdf|swf|svg|svgz|ico|ttf|ttc|otf|eot|woff|woff2|webp)$">
+ <IfModule mod_headers.c>
+    ExpiresActive On
+    ExpiresDefault  "access plus 1 month"
+    Header set Cache-Control "public, immutable, max-age=2628000, s-maxage=2628000"
+    Header set Access-Control-Allow-Origin "*"
+ </IfModule>
+</FilesMatch>
+
+DirectoryIndex index.html
+
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  RewriteRule ^ - [E=protossl]
+  RewriteCond %{HTTPS} on
+  RewriteRule ^ - [E=protossl:s]
+  RewriteCond %{HTTPS} off [OR]
+	RewriteCond %{HTTP_HOST} ^www\.mv2\.agency [NC]
+	RewriteRule (.*) https://m.webcamnsk.com/$1 [L,R=301]
+
+  <IfModule mod_headers.c>
+    # Serve gzip compressed CSS files if they exist and the client accepts gzip.
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}\.gz -s
+    RewriteRule ^(.*)\.css $1\.css\.gz [QSA]
+
+    # Serve gzip compressed JS files if they exist and the client accepts gzip.
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}\.gz -s
+    RewriteRule ^(.*)\.js $1\.js\.gz [QSA]
+
+    # Serve correct content types, and prevent mod_deflate double gzip.
+    RewriteRule \.css\.gz$ - [T=text/css,E=no-gzip:1]
+    RewriteRule \.js\.gz$ - [T=text/javascript,E=no-gzip:1]
+
+    <FilesMatch "(\.js\.gz|\.css\.gz)$">
+      # Serve correct encoding type.
+      Header set Content-Encoding gzip
+      # Force proxies to cache gzipped & non-gzipped css/js files separately.
+      Header append Vary Accept-Encoding
+    </FilesMatch>
+  </IfModule>
+</IfModule>
