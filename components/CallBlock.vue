@@ -1,9 +1,17 @@
 <template>
     <div class="call_block">
+        <div v-if="loading" class="loading">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
         <h4>Всего два клика и с тобой свяжется наш администратор</h4>
         <form @submit.prevent="formSubmit">
             <div v-if="error" class="alert alert-danger" role="alert">
                 Заполните все поля
+            </div>
+            <div v-if="success" class="alert alert-success" role="alert">
+                Спасибо за вашу заявку, мы с вами свяжемся!
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" v-model="name" id="formName" placeholder="Ваше имя *">
@@ -49,11 +57,14 @@ export default {
             chc: 'Веб-моделью',
             name: '',
             phone: '',
-            error: false
+            error: false,
+            loading: false,
+            success: false
         }
     },
     methods: {
         formSubmit(){
+            this.success = false;
             if(this.name && this.phone) {
                 this.error = false;
                 this.formRequest();
@@ -67,8 +78,14 @@ export default {
                 phone: this.phone,
                 type: this.chc
             }
-            const response = await this.$axios.$post('api/', data);
-            console.log(response);
+            this.loading = true;
+            const response = await this.$axios.$post('', data);
+            this.loading = false;
+            this.name = '';
+            this.phone = '';
+            this.chc = 'Веб-моделью';
+            this.error = false;
+            this.success = true;
         }
     }
 }
@@ -85,6 +102,19 @@ export default {
     background-size: cover !important;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: multiply;
+    position: relative;
+    .loading{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.28);
+        z-index: 10;
+    }
     .center_btn{
         margin: 0px auto;
         display: block;

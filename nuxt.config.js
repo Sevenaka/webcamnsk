@@ -36,8 +36,8 @@ module.exports = {
     ]
   ],
   axios: {
-    baseURL: 'https://webcamnsk.com/',
-    credentials: true,
+    baseURL: 'http://webcam-nsk.com',
+    credentials: false,
     debug: false
     //https: true
   },
