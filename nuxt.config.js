@@ -1,7 +1,4 @@
 module.exports = {
-  /*
-  ** Headers of the page
-  */
   head: {
     title: 'wmodel',
     meta: [
@@ -36,7 +33,7 @@ module.exports = {
     ]
   ],
   axios: {
-    baseURL: 'http://webcam-nsk.com',
+    baseURL: 'https://webcam-nsk.com',
     credentials: false,
     debug: false
     //https: true

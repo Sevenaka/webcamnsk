@@ -23,6 +23,9 @@ export default {
         return{
             lists: [
                 {
+                    img: '11.jpg'
+                },
+                {
                     img: '1.jpg'
                 },
                 {
@@ -38,12 +41,6 @@ export default {
                     img: '5.jpeg'
                 },
                 {
-                    img: '6.jpg'
-                },
-                {
-                    img: '7.jpg'
-                },
-                {
                     img: '8.jpg'
                 },
                 {
@@ -51,9 +48,6 @@ export default {
                 },
                 {
                     img: '10.jpg'
-                },
-                {
-                    img: '11.jpg'
                 }
             ],
             swiperOptionTop: {
