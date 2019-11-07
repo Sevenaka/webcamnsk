@@ -19,7 +19,7 @@ AddEncoding gzip svgz
   RewriteCond %{HTTPS} on
   RewriteRule ^ - [E=protossl:s]
   RewriteCond %{HTTPS} off [OR]
-	RewriteCond %{HTTP_HOST} ^www\.mv2\.agency [NC]
+	RewriteCond %{HTTP_HOST} ^www\.m\.webcamnsk\.com [NC]
 	RewriteRule (.*) https://m.webcamnsk.com/$1 [L,R=301]
 
   <IfModule mod_headers.c>
