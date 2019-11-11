@@ -19,9 +19,6 @@
                 </div>
                 <div class="col-4">
                     <div class="header_kont right">
-                        <a class="itm" href="https://www.instagram.com/rabotansk_/">
-                            <i class="ico ico_pattern ico_inst"></i>
-                        </a>
                         <a class="itm" href="https://vk.com/webcamstudionsk">
                             <i class="ico ico_pattern ico_vk"></i>
                         </a>

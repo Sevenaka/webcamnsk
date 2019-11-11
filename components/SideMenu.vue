@@ -29,6 +29,9 @@
                             <i class="ico ico_pattern ico_email"></i>
                             <a href="mailto:job-wmodelsstudio@mail.ru">job-wmodelsstudio@mail.ru</a>
                         </div>
+                        <div class="clear"></div>
+                        <br />
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aebcc31aa3d073d98220890b4414e4f01ba0e618d2e0ca3b65122193ad71706b4&amp;source=constructor" width="100%" height="300" frameborder="0"></iframe>
                     </div>
                 </div>
             </div>

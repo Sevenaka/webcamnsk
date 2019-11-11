@@ -24,6 +24,10 @@
       <Detals />
     </section>
     <section class="page_section">
+      <h2 class="h2">О нас</h2>
+      <About />
+    </section>
+    <section class="page_section">
       <h2 class="h2">Часто задаваемые вопросы</h2>
       <Faq />
     </section>
@@ -37,13 +41,15 @@ import Favorite from '~/components/Favorite'
 import Detals from '~/components/Detals'
 import CallBlock from '~/components/CallBlock'
 import Faq from '~/components/Faq'
+import About from '~/components/About'
 export default {
   components: {
     Interier,
     Favorite,
     Detals,
     CallBlock,
-    Faq
+    Faq,
+    About
   },
   methods: {
     skipLink() {
@@ -90,7 +96,7 @@ export default {
     right: 0;
     bottom: 0;
     z-index: 5;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
   }
   background: url('~static/mainbg2.jpg');
   background-position: center;

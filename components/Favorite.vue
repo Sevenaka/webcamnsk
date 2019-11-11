@@ -64,6 +64,7 @@
             margin: 0px auto;
             max-width: 160px;
             line-height: 18px;
+            color: var(--main);
         }
     }
     .col-6{
