@@ -7,7 +7,7 @@
                         <nav>
                             <ul>
                                 <li><nuxt-link to="/o-studii">О студии</nuxt-link></li>
-                                <li><nuxt-link to="/kontakty">Контакты</nuxt-link></li>
+                                <li><nuxt-link to="/faq">FAQ</nuxt-link></li>
                             </ul>
                         </nav>
                     </div>

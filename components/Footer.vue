@@ -25,9 +25,9 @@
                                     </nuxt-link>
                                 </li>
                                 <li>
-                                    <nuxt-link to="/faq">
-                                        <i class="ico ico_faq"></i>
-                                        <div class="label">FAQ</div>
+                                    <nuxt-link to="/kontakty">
+                                        <i class="ico ico_loc"></i>
+                                        <div class="label">Контакты</div>
                                     </nuxt-link>
                                 </li>
                                 <li>
@@ -130,6 +130,9 @@ export default {
                             &.ico_int{
                                 background: url('~static/ico/armchair.svg');
                             }
+                            &.ico_loc{
+                                background: url('~static/ico/loc.svg');
+                            }
                         }
                         .label{
                             font-size: 11px;
@@ -167,6 +170,9 @@ body{
                                         }
                                         &.ico_faq{
                                             background: url('~static/ico/info_color.svg');
+                                        }
+                                        &.ico_loc{
+                                            background: url('~static/ico/loc-color.svg');
                                         }
                                     }
                                 }
