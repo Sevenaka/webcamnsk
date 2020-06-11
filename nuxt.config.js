@@ -33,9 +33,9 @@ module.exports = {
     ]
   ],
   axios: {
-    baseURL: 'https://webcam-nsk.com',
+    baseURL: 'https://form.mv2.agency/',
     credentials: false,
-    debug: false
+    debug: true
     //https: true
   },
   loading: { color: '#3B8070' },

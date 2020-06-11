@@ -8,31 +8,31 @@
                             <ul>
                                 <li>
                                     <nuxt-link to="/">
-                                        <i class="ico ico_home"></i>
+                                        <i class="icon-home"></i>
                                         <div class="label">Главная</div>
                                     </nuxt-link>
                                 </li>
                                 <li>
                                     <nuxt-link to="/nashi-vakansii">
-                                        <i class="ico ico_resume"></i>
+                                        <i class="icon-briefcase"></i>
                                         <div class="label">Вакансии</div>
                                     </nuxt-link>
                                 </li>
                                 <li>
                                     <nuxt-link to="/interery-studii-wmodels">
-                                        <i class="ico ico_int"></i>
+                                        <i class="icon-armchair"></i>
                                         <div class="label">Интерьеры</div>
                                     </nuxt-link>
                                 </li>
                                 <li>
                                     <nuxt-link to="/kontakty">
-                                        <i class="ico ico_loc"></i>
+                                        <i class="icon-loc"></i>
                                         <div class="label">Контакты</div>
                                     </nuxt-link>
                                 </li>
                                 <li>
                                     <button @click="menuToggle()">
-                                        <i class="ico ico_menu"></i>
+                                        <i class="icon-list-menu_color"></i>
                                         <div class="label">Меню</div>
                                     </button>
                                 </li>
@@ -108,31 +108,9 @@ export default {
                         padding-bottom: 5px;
                         padding-top: 5px;
                         position: relative;
-                        .ico{
-                            width: 31px;
-                            height: 26px;
-                            display: inline-block;
-                            background-position: center!important;
-                            background-size: contain!important;
-                            background-repeat: no-repeat!important;
-                            &.ico_home{
-                                background: url('~static/ico/home.svg');
-                            }
-                            &.ico_menu{
-                                background: url('~static/ico/list-menu.svg');
-                            }
-                            &.ico_resume{
-                                background: url('~static/ico/briefcase.svg');
-                            }
-                            &.ico_faq{
-                                background: url('~static/ico/info.svg');
-                            }
-                            &.ico_int{
-                                background: url('~static/ico/armchair.svg');
-                            }
-                            &.ico_loc{
-                                background: url('~static/ico/loc.svg');
-                            }
+                        color: #000000;
+                        i{
+                            font-size: 30px;
                         }
                         .label{
                             font-size: 11px;
@@ -158,22 +136,8 @@ body{
                                     .label{
                                         color: var(--main);
                                     }
-                                    .ico{
-                                        &.ico_home{
-                                            background: url('~static/ico/home_color.svg');
-                                        }
-                                        &.ico_resume{
-                                            background: url('~static/ico/briefcase_color.svg');
-                                        }
-                                        &.ico_int{
-                                            background: url('~static/ico/armchair_color.svg');
-                                        }
-                                        &.ico_faq{
-                                            background: url('~static/ico/info_color.svg');
-                                        }
-                                        &.ico_loc{
-                                            background: url('~static/ico/loc-color.svg');
-                                        }
+                                    i{
+                                        color: var(--main);
                                     }
                                 }
                             }
@@ -190,13 +154,9 @@ body{
                     ul{
                         li{
                             button{
+                                .icon-list-menu_color,
                                 .label{
                                     color: var(--main);
-                                }
-                                .ico{
-                                    &.ico_menu{
-                                        background: url('~static/ico/list-menu_color.svg');
-                                    }
                                 }
                             }  
                         }

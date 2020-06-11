@@ -1,8 +1,8 @@
 <template>
     <div class="detal">
-        <a class="detal_item" :to="item.link" :key="index" v-for="(item, index) in detals" :style="{'background-image': 'url(' + require('~/static/detal/' + item.img) + ')' }">
+        <nuxt-link class="detal_item" :to="item.link" :key="index" v-for="(item, index) in detals" :style="{'background-image': 'url(' + require('~/static/detal/' + item.img) + ')' }">
             <h3 class="name"><span>{{item.name}}</span></h3>
-        </a>
+        </nuxt-link>
     </div>
 </template>
 
