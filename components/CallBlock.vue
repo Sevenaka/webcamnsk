@@ -37,10 +37,10 @@
                         </label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input v-model="chc" value="Агент" type="radio" id="selectType3" name="customRadio" class="custom-control-input">
+                        <input v-model="chc" value="Администратор" type="radio" id="selectType3" name="customRadio" class="custom-control-input">
                         <label class="custom-control-label" for="selectType3">
                             <i class="ico ico_pattern ico_agent"></i>
-                            <div class="name">Агент</div>
+                            <div class="name">Администратор</div>
                         </label>
                     </div>
                 </div>
