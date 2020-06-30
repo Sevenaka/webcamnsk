@@ -12,7 +12,7 @@
                         </nav>
                     </div>
                     <div class="side_block">
-                        <button type="button" class="btn btn-primary btn-lg">Заполнить анкету</button>
+                        <button @click="callBtn()" type="button" class="btn btn-primary btn-lg">Заполнить анкету</button>
                     </div>
                     <div class="side_block">
                         <div class="kont_itm">
@@ -38,6 +38,22 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    methods: {
+        callBtn() {
+            let call_block = document.querySelector('.call_block');
+            if(call_block) {
+                document.body.classList.remove('open');
+                call_block.scrollIntoView({behavior: "smooth",block: "start"});
+                let f_input = call_block.querySelector('#formName');
+                f_input.focus();
+            }
+        }
+    }
+}
+</script>
 
 <style lang="scss">
 .side_menu{
