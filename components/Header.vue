@@ -22,6 +22,9 @@
                         <a class="itm" href="https://vk.com/wmodelsstudio">
                             <i class="ico ico_pattern ico_vk"></i>
                         </a>
+                        <a class="itm" href="https://instagram.com/studiowmodels?r=nametag">
+                            <i class="ico ico_pattern ico_inst"></i>
+                        </a>
                     </div>
                 </div>
             </div>
